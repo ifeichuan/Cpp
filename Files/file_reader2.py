@@ -1,0 +1,12 @@
+import random
+filename = 'pi_digits.txt'
+
+with open(filename) as file_object:
+    lines = file_object.readlines()
+
+pi_string = ''
+for line in lines:
+    pi_string += line.strip()
+    
+print(pi_string)
+print(f'random four nums are {random.sample(pi_string,4)}')
