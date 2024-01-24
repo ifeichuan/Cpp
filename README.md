@@ -1,2 +1,2 @@
 # study_Code
-My study code 
+My study  C code 
