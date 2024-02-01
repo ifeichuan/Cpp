@@ -15,4 +15,5 @@ int main(){
         printf(" %lld",nums[i]);
     }
     printf("\n");
+    int *curee = (int*)(malloc(sizeof(int)*2));
 }
