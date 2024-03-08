@@ -3,7 +3,7 @@
 using namespace std;
 
 void SubSitution(int nums[],int len){
-   //ÖÃ»»Êı×é
+   //ç½®æ¢æ•°ç»„
    for(int i = 0;i<len;i++){
     nums[i] +=nums[len-i-1];
     nums[len-i-1] = nums[i] - nums[len-i-1];
@@ -12,14 +12,14 @@ void SubSitution(int nums[],int len){
 }
 
 void PrintfArr(int nums[],int len){
-    //´òÓ¡Êı×é
+    //æ‰“å°æ•°ç»„
     for(int i=0;i<len;i++){
         printf("%d ",nums[i]);
     }
     printf("\n");
 }
 void frontInsertion(int nums[],int len,int lenth){
-    //Ç°²å
+    //å‰æ’
     for(int i = 0;i<lenth;i++){
         int t = nums[len-1];
         for(int j = 0;j<len;j++){
@@ -30,7 +30,7 @@ void frontInsertion(int nums[],int len,int lenth){
 }
 
 void Insertion(int nums[],int len,int lenth){
-    //ÖĞ¼ä²åÈë
+    //ä¸­é—´æ’å…¥
     for(int i =0;i<lenth;i++){
         int t = nums[len-1];
         for(int j = 0;j<len/2;j++){
@@ -41,11 +41,11 @@ void Insertion(int nums[],int len,int lenth){
 }
 
 int main(){
-    printf("ÇëÒÀ´ÎÊäÈë: ĞÕÃû³¤¶È,ÄÏ±±·½ÈË£¨1/2/3£©,ÄĞÅ®(1/2)\n");
+    printf("è¯·ä¾æ¬¡è¾“å…¥: å§“åé•¿åº¦,å—åŒ—æ–¹äººï¼ˆ1/2/3ï¼‰,ç”·å¥³(1/2)\n");
     int lenth,direction,gender,len;
     scanf("%d%d%d",&lenth,&direction,&gender);
-    //´Ë´¦Êı×é½öÖ§³Ö456£¡
-    printf("ÇëÊäÈëÒª´´½¨µÄÅÆ×é×î´óÖµ(4/5/6):");
+    //æ­¤å¤„æ•°ç»„ä»…æ”¯æŒ456ï¼
+    printf("è¯·è¾“å…¥è¦åˆ›å»ºçš„ç‰Œç»„æœ€å¤§å€¼(4/5/6):");
     int size;
     scanf("%d",&size);
     int nums[size*2];
@@ -54,29 +54,29 @@ int main(){
         nums[i+size] = i+1;
     }
     len = sizeof(nums)/sizeof(int);
-    printf("³õÊ¼Êı×é:");
+    printf("åˆå§‹æ•°ç»„:");
     PrintfArr(nums,len);
     frontInsertion(nums,len,lenth);
-    printf("ĞÕÃû²åÈëºó:");
+    printf("å§“åæ’å…¥å:");
     PrintfArr(nums,len);
     Insertion(nums,len,len/2-1);
-    printf("²åÈëlen/2-1ÕÅºó:");
+    printf("æ’å…¥len/2-1å¼ å:");
     PrintfArr(nums,len);
     int under_butt = nums[len-1];
     len--;
-    printf("Æ¨¹Éµ×ÏÂµÄÅÆ:%d\n",under_butt);
+    printf("å±è‚¡åº•ä¸‹çš„ç‰Œ:%d\n",under_butt);
     Insertion(nums,len,direction);
-    printf("ÄÏ±±·½²åÈëºó:");
+    printf("å—åŒ—æ–¹æ’å…¥å:");
     PrintfArr(nums,len);
     len-=gender;
-    printf("ĞÔ±ğÌŞ³ıºó:");
+    printf("æ€§åˆ«å‰”é™¤å:");
     PrintfArr(nums,len);
     frontInsertion(nums,len,(len==6||len==8||len==5||len==7)?7:gender==2?len-3:len/2);
-    printf("%dÕÅÖÃ»»ºó:",(len==6||len==8||len==5||len==7)?7:gender==2?len-3:len/2);
+    printf("%då¼ ç½®æ¢å:",(len==6||len==8||len==5||len==7)?7:gender==2?len-3:len/2);
     PrintfArr(nums,len);
     for(;len>0;){
         frontInsertion(nums,len--,1);
         PrintfArr(nums,len);
     }
-    printf("×îÖÕ½á¹û:Æ¨¹Éµ×ÏÂ:%d,×îºóÒ»ÕÅ:%d",under_butt,nums[0]);
+    printf("æœ€ç»ˆç»“æœ:å±è‚¡åº•ä¸‹:%d,æœ€åä¸€å¼ :%d",under_butt,nums[0]);
 }
