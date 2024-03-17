@@ -1,3 +1,7 @@
 {
-    "files.defaultLanguage": "cpp"
+    "files.defaultLanguage": "cpp",
+    "files.associations": {
+        "*.cpp": "cpp",
+        "ostream": "cpp"
+    }
 }
