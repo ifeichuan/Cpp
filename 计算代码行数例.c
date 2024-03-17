@@ -21,7 +21,7 @@ int countLines(const char *filename)
         
         if ((fp = fopen(filename, "r")) == NULL) 
         {
-                fprintf(stderr, "Can not open the file£º%s\n", filename);
+                fprintf(stderr, "Can not open the fileï¿½ï¿½%s\n", filename);
                 return 0;
         }
         
@@ -90,12 +90,12 @@ int main()
 {
         char path[MAX] = ".";
         
-        printf("¼ÆËãÖÐ...\n");
+        printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½...\n");
         
         findAllCodes(path);
         findALLDirs(path);
         
-        printf("Ä¿Ç°Äã×Ü¹²Ð´ÁË %ld ÐÐ´úÂë£¡\n\n", total);
+        printf("Ä¿Ç°ï¿½ï¿½ï¿½Ü¹ï¿½Ð´ï¿½ï¿½ %ld ï¿½Ð´ï¿½ï¿½ë£¡\n\n", total);
         system("pause");
         
         return 0;
