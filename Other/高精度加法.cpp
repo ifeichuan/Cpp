@@ -1,46 +1,40 @@
 #include<bits/stdc++.h>
 
 using namespace std;
-#define MAX 10000001
 
-string add(string str1,string str2)//高精度加法
-{
-    string str;
-    int len1=str1.length();
-    int len2=str2.length();
-    //前面补0，弄成长度相同
-    if(len1<len2)
-    {
-        for(int i=1;i<=len2-len1;i++)
-           str1="0"+str1;
+string add(string str1,string str2){
+    string str3;
+    int len1,len2;
+    len1 = str1.length();
+    len2 = str2.length();
+    if(len1>len2){//对齐数位
+        for(int i =1;i<=len1-len2;i++){
+            str2 = "0"+str2;
+        }
     }
-    else
-    {
-        for(int i=1;i<=len1-len2;i++)
-           str2="0"+str2;
+    else{
+        for(int i =1;i<=len2-len1;i++){
+            str1 = "0"+str1;
+        }
     }
-    len1=str1.length();
-    int cf=0;
+    len1 = str1.length();//更新位数
+    // cout<<str1<<endl<<str2;
+    int  c=0;
     int temp;
-    for(int i=len1-1;i>=0;i--)
-    {
-        temp=str1[i]-'0'+str2[i]-'0'+cf;
-        cf=temp/10;
-        temp%=10;
-        str=char(temp+'0')+str;
+    for(int i = len1-1;i>=0;i--){
+            temp = c+str1[i]+str2[i]-96;
+            c=temp/10;
+            temp%=10;
+            str3 = char(temp+'0')+str3;
     }
-    if(cf!=0)  str=char(cf+'0')+str;
-    return str;
+    if(c!=0) str3=char(c+'0')+str3;//如果c不等于0,代表还有进位
+    //将c+'0'转化为字符后拼接进结果字符串
+    return str3;
 }
 
-
 int main(){
-    string a,b,str;
+    string a,b;
     cin>>a>>b;
-    str = add(a,b);
-    cout<<str;
-    int a[19] = {1,2,3,2,5,1,2,3,6,4,9};
-    map<int,int>dict;
-    
-
+    // add(a,b);
+    cout<<add(a,b)<<endl;
 }

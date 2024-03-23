@@ -2,6 +2,8 @@
     "files.defaultLanguage": "cpp",
     "files.associations": {
         "*.cpp": "cpp",
-        "ostream": "cpp"
-    }
+        "ostream": "cpp",
+        "iostream": "cpp"
+    },
+    "commentTranslate.source": "Baidu"
 }
