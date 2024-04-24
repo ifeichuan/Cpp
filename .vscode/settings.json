@@ -3,7 +3,12 @@
     "files.associations": {
         "*.cpp": "cpp",
         "ostream": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "array": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "ranges": "cpp",
+        "span": "cpp"
     },
-    "commentTranslate.source": "Baidu"
+    "commentTranslate.source": "Google"
 }

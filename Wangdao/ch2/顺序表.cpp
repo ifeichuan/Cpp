@@ -55,5 +55,8 @@ int LocateElem(SeqList &L,ElemType e){//查找
 
 
 int main(){
-
+    SeqList L;
+    TrendsInitList(L);
+    L.data[0] = 1;
+    printf("%d",L.data[0]);
 }
