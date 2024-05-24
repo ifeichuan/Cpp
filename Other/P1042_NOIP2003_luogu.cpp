@@ -1,38 +1,44 @@
 #include<bits/stdc++.h>
 
 using namespace std;
-char str[52000];
+
 int main(){
-    char t;
-    long long count =0;
-    while(1){
-        scanf("%c",&t);
-        if(t=='\n') continue;
-        if(t=='E') break;
-        str[count++] = t;
+    char result[700000];
+    int i,j,sc1,sc2;
+    for(i=0;cin>>result[i]&&result[i]!='E';i++);
+    // cout<<result;
+    sc1 = 0;
+    sc2 = 0;
+    for(i = 0;result[i]!='E';i++){
+        if(result[i] =='W') sc1++;
+        else sc2++;
+        if(abs(sc1-sc2)>=2){
+            if(sc1>=11||sc2>=11){
+                printf("%d:%d\n",sc1,sc2);
+                sc1 = sc2 = 0;
+                }
+            }    
     }
-    //十一分制
-    int W=0,L=0;
-    for(int i = 0;i<count;i++){
-        if(str[i]=='W') W++;
-        else L++;
-        if(L+W==11){
-            printf("%d:%d\n",W,L);
-            W=0;
-            L=0;
-        }
+    
+     printf("%d:%d\n",sc1,sc2);
+     printf("\n");
+     sc1 = sc2 = 0;
+    for(i = 0;result[i]!='E';i++){
+        if(result[i] =='W') sc1++;
+        else sc2++;
+        if(abs(sc1-sc2)>=2){
+            if(sc1>=21||sc2>=21){
+                printf("%d:%d\n",sc1,sc2);
+                sc1 = sc2 = 0;
+                }
+            }    
     }
-    printf("%d:%d\n\n",W,L);
-    //二十二分制
-     W=0,L=0;
-    for(int i = 0;i<count;i++){
-        if(str[i]=='W') W++;
-        else L++;
-        if(L+W==21){
-            printf("%d:%d\n",W,L);
-            W=0;
-            L=0;
-        }
-    }
-        printf("%d:%d\n",W,L);
-}
+     printf("%d:%d\n",sc1,sc2);
+ }
+
+// W W W W W W W W W W W 
+// W W W W W W W W W W W 
+// L W
+// W W W W W W W W W W W 
+// W W W W W W W W W W W
+// L W

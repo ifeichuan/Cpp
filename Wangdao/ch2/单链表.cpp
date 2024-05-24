@@ -112,16 +112,36 @@ Linklist List_EndInsert(Linklist &L){//尾插法
         s = new LNode;
         s->data = x;
         r->next = s;
-        r = s;
+        r = r->next;
         scanf("%d",&x);
     }
     r->next = NULL;
     return L;
 }
 
+Linklist mergeTwoLists(Linklist &L1,Linklist &L2){
+    LNode *l1=L1->next,*l2=L2->next,*r;
+    Linklist L3;
+    r = L3;
+    while(l1!=NULL&&l2!=NULL){
+        if(l1->data < l2->data){
+            r->next = l1;
+            l1 = l1->next;
+        }
+        else{
+            r->next = l2;
+            l2 = l2->next;
+        }
+        r=r->next;
+    }
+    if(l1==NULL) r->next =  l2;
+    if(l2==NULL) r->next = l1;
+    return L3;
+}
 
 int main(){
     Linklist L;
     InitList(L);
     List_EndInsert(L);
+    
 }
