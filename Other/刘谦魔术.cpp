@@ -1,7 +1,7 @@
 #include<iostream>
 
 using namespace std;
-
+//11111
 void SubSitution(int nums[],int len){
    //置换数组
    for(int i = 0;i<len;i++){
