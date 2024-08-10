@@ -10,5 +10,6 @@
         "ranges": "cpp",
         "span": "cpp"
     },
-    "commentTranslate.source": "Google"
+    "commentTranslate.source": "Google",
+    "Codegeex.CompletionDelay": 1
 }
