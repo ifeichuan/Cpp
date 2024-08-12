@@ -11,5 +11,6 @@
         "span": "cpp"
     },
     "commentTranslate.source": "Google",
-    "Codegeex.CompletionDelay": 1
+    "Codegeex.CompletionDelay": 1,
+    "Codegeex.GenerationPreference": "block"
 }
