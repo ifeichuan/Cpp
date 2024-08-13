@@ -1,0 +1,16 @@
+{
+    "files.defaultLanguage": "cpp",
+    "files.associations": {
+        "*.cpp": "cpp",
+        "ostream": "cpp",
+        "iostream": "cpp",
+        "array": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "ranges": "cpp",
+        "span": "cpp"
+    },
+    "commentTranslate.source": "Google",
+    "Codegeex.CompletionDelay": 1,
+    "Codegeex.GenerationPreference": "block"
+}
