@@ -8,7 +8,9 @@
         "string": "cpp",
         "string_view": "cpp",
         "ranges": "cpp",
-        "span": "cpp"
+        "span": "cpp",
+        "utility": "cpp",
+        "unordered_set": "cpp"
     },
     "commentTranslate.source": "Google",
     "Codegeex.CompletionDelay": 1,
