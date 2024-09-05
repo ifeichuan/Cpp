@@ -47,6 +47,7 @@ private:
     void searchBST(TreeNode* cur){
         if(!cur) return;
         searchBST(cur->left);
+        
         if(!pre){
             count = 1;
         }
