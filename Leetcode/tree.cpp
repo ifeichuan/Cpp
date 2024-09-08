@@ -41,6 +41,30 @@ void insert(TreeNode *root, int val)
 }
 
 // 树的递归遍历
+// 前序遍历
+void preorderTraversal(TreeNode* root, vector<int>& result) {
+    if (root == nullptr) return;
+    result.push_back(root->val);
+    preorderTraversal(root->left, result);
+    preorderTraversal(root->right, result);
+}
+
+// 中序遍历
+void inorderTraversal(TreeNode* root, vector<int>& result) {
+    if (root == nullptr) return;
+    inorderTraversal(root->left, result);
+    
+    result.push_back(root->val);
+    inorderTraversal(root->right, result);
+}
+
+// 后序遍历
+void postorderTraversal(TreeNode* root, vector<int>& result) {
+    if (root == nullptr) return;
+    postorderTraversal(root->left, result);
+    postorderTraversal(root->right, result);
+    result.push_back(root->val);
+}
 
 bool compare(TreeNode *left, TreeNode *right)
 {

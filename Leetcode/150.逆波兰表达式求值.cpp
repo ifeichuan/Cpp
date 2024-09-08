@@ -66,5 +66,13 @@ int main(){
     Solution A ;
     vector<string> tokens{"3","-4","+"};
     long long X  = A.evalRPN(tokens);
+    // 一些测试用例
+    vector<string> test1 = {"2", "1", "+", "3", "*"};
+    vector<string> test2 = {"4", "13", "5", "/", "+"};
+    vector<string> test3 = {"10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"};
+    
+    cout << "测试用例1结果: " << A.evalRPN(test1) << endl;
+    cout << "测试用例2结果: " << A.evalRPN(test2) << endl;
+    cout << "测试用例3结果: " << A.evalRPN(test3) << endl;
     printf("x = %lld",X);
 }
