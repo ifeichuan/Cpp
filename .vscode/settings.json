@@ -10,7 +10,11 @@
         "ranges": "cpp",
         "span": "cpp",
         "utility": "cpp",
-        "unordered_set": "cpp"
+        "unordered_set": "cpp",
+        "vector": "cpp",
+        "format": "cpp",
+        "xstring": "cpp",
+        "algorithm": "cpp"
     },
     "commentTranslate.source": "Google",
     "Codegeex.CompletionDelay": 1,
