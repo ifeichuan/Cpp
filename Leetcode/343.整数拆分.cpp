@@ -1,8 +1,8 @@
 /*
- * @lc app=leetcode.cn id=1390 lang=cpp
+ * @lc app=leetcode.cn id=343 lang=cpp
  * @lcpr version=30204
  *
- * [1390] 四因数
+ * [343] 整数拆分
  */
 
 
@@ -27,13 +27,18 @@ using namespace std;
 // @lc code=start
 class Solution {
 public:
-    int sumFourDivisors(vector<int>& nums) {
-        unordered_set<int> M;
-        M.insert(2);
-        cout<<M.count(2);
-        int right,left,down,up;
-        max(right,left);
-        return 2;
+    int integerBreak(int n) {
+        vector<int> dp(n+1);
+        dp[0] = dp[1] = 0;
+        // dp[i] = i的最大拆分正整数乘积
+        for(int i = 2;i<=n;i++){
+            int curMax = 0;
+            for(int j = 1;j<i;j++){
+                curMax = max(curMax,max(j*(i-j),j*dp[i-j]));
+            }
+            dp[i] = curMax;
+        }
+        return dp[n];
     }
 };
 // @lc code=end
@@ -42,15 +47,11 @@ public:
 
 /*
 // @lcpr case=start
-// [21,4,7]\n
+// 2\n
 // @lcpr case=end
 
 // @lcpr case=start
-// [21,21]\n
-// @lcpr case=end
-
-// @lcpr case=start
-// [1,2,3,4,5]\n
+// 10\n
 // @lcpr case=end
 
  */
